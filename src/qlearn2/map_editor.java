@@ -115,8 +115,6 @@ public class map_editor extends JPanel implements MouseListener {
                      g2d.drawImage(wall, x, y, null);
                   if (map[i][j] == 3)
                      g2d.drawImage(apple, x, y, null);
-                 /// Rectangle2D rectangle = new Rectangle2D.Float(x, y, 32, 32) ; 
-                 // g2d.draw(rectangle) ;
                   x += 32 ;
                 
               }
@@ -176,9 +174,6 @@ public class map_editor extends JPanel implements MouseListener {
       {
           pazymetas = 3; 
       }
-      /*int x1 = x / 32  ;
-      int y1 = y / 32 ; 
-      System.out.println("Kelintas:" + x1 + " " +  y1) ; */
     }
 
     public void mousePressed(MouseEvent e) {
