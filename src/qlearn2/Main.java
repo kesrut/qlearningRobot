@@ -23,8 +23,6 @@ import javax.swing.JTextField;
 public class Main {
     
     public static void main(String[] args) throws InterruptedException {
-      //  Qlearn q = new Qlearn() ; 
-       // q.q();
         learn q = new learn() ;
         q.create();
     }
@@ -32,19 +30,6 @@ public class Main {
 }
 class Qlearn
 { 
-    /*
-    public int[][] map =
-        {{0,0,0,0,0,0,0,0,0,0},
-         {2,2,2,2,2,2,2,0,0,0},
-         {0,0,2,2,0,0,0,0,0,0},
-         {0,0,2,2,0,0,2,0,2,0},
-         {0,2,0,0,0,2,0,0,2,0},
-         {0,2,0,2,2,2,0,0,2,0},
-         {0,0,0,2,0,2,0,0,2,0},
-         {0,0,2,0,0,2,0,0,2,0},
-         {3,2,0,0,0,2,0,0,2,0},
-         {2,0,0,0,0,0,0,0,2,0}
-        }; */ 
         
      public int [][]map ; 
      
@@ -190,17 +175,7 @@ class qwrapper
 }
 class learn extends JPanel implements ActionListener
 {
-    /* public int[][] map =
-        {{0,0,0,0,0,0,0,0,0,0},
-         {2,2,2,2,2,2,2,0,0,0},
-         {0,0,2,2,0,0,0,0,0,0},
-         {0,0,2,2,0,0,2,0,2,0},
-         {0,2,0,0,0,2,0,0,2,0},
-         {0,2,0,2,2,2,0,0,2,0},
-         {0,0,0,2,0,2,0,0,2,0},
-         {0,0,2,0,0,2,0,0,2,0},
-         {3,2,0,0,0,2,0,0,2,0},
-         {2,0,0,0,0,0,0,0,2,0}} ;*/
+    
     int map[][] ; 
     int map_start[][];
     Qlearn q ;
@@ -223,11 +198,9 @@ class learn extends JPanel implements ActionListener
          map_start = new int[10][10] ; 
         map = map_start ;
         JPanel options = new JPanel() ; 
-       // JPanel slide = new JPanel() ; 
         JButton start = new JButton("Start") ; 
         JButton map_editor_btn = new JButton("Map editor") ; 
         contentPane.add(this, BorderLayout.CENTER) ;
-         // map = q.map ; 
           repaint() ;
             JLabel slider = new JLabel("Speed") ;
         rate = new JTextField("0.9", 4) ; 
@@ -262,8 +235,6 @@ class learn extends JPanel implements ActionListener
 );
        options.add(new JLabel("Learning rate:"), BorderLayout.PAGE_START)  ; 
        options.add(rate, BorderLayout.PAGE_START)  ; 
-       // JSlider fps = new JSlider(JSlider.HORIZONTAL, 0, 30, 5) ;
-        //options.add(fps, BorderLayout.PAGE_START)  ;
         contentPane.add(options, BorderLayout.PAGE_START) ;
         frame.show() ;
         start.addActionListener(this);
